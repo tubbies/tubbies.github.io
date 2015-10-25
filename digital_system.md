@@ -1,11 +1,10 @@
 # Digital System
 
 ## Overview
-***
+
 - To review basics of digital design
 
 ## Logic types
-***
 
 #### **Combinational Logic**
  
@@ -19,7 +18,6 @@
 - **Flip-Flop**: Edge-sensitive (Change data when positive / negative edge)
 
 ## **Synchronous vs Asynchronous design**
-***
 
 #### **Synchronous circuit**
 - Digital circuit is synchronized by clock signal
@@ -28,7 +26,6 @@
 - Digital circuit is not governed by clock signal and transferred by specific transfer protocol (such as handshaking)
 
 ## **Clock**
-***
 
 - Synchronization signal for synchronous digital circuit. Usually have 50% duty cycle
 
@@ -41,7 +38,6 @@
 - **Hold time** : The minimum amount of time the data should be held steady after clock event (Removal time is hold time of asynchronous port)
 
 ## **Sign-off Check**
-***
 
 - **DRC** (Design Rule Check) / **LVS** (Layout Versus Schematic)
 
