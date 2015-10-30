@@ -43,7 +43,7 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 
 #### User-defined data type
 - Keyword **typedef** can make user-defined datatype same as in C/C++. 
-	```Verilog
+    ```Verilog
     typedef logic [63:0] Packet;
     ```
 
