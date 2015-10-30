@@ -25,6 +25,7 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 
 #### String data type
 - Dynamic length string data type. Each characters of string can be represented by *byte* type. 
+
 	```Verilog
     string str = "Hello World";
     ```
@@ -42,7 +43,8 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
     |**atobin()**|ASCII to binary number|
 
 #### User-defined data type
-- Keyword **typedef** can make user-defined datatype same as in C/C++. 
+- Keyword **typedef** can make user-defined datatype same as in C/C++.
+
     ```Verilog
     typedef logic [63:0] Packet;
     ```
