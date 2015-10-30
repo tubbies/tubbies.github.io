@@ -2,7 +2,52 @@
 ## Overview
 IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description Language - IEEE1364-2001) and HVL(Hardware Verification Language - IEEE1364-2005). 
 ## Data Types
-### Structure
+#### Integer data type
+|Data type|Description|
+|:-:|:-:|
+|**int**|32-bit signed integer, 2-state data type|
+|**logic**|unsigned 1 bit (Equivalent to *reg*), 4-state data type|
+|**bit**|unsigned 1 bit, 2-state data type|
+|**byte**|8-bit signed integer, 2-state data type|
+|**longint**|64-bit signed integer, 2-state data type|
+
+- - 2-state data type : each bit can have 0 or 1.
+- - 4-state data type : each bit can have 0,1,x and z. 
+
+#### Real data type
+|Data type|Description|
+|:-:|:-:|
+|**real**|Equivalent to C *double* type(64 bit)|
+|**shortreal**|Equivalent to C *float* type (32 bit)|
+
+#### Chandle data type
+- Represent storage for pointers that passed using DPI.
+
+#### String data type
+- Dynamic length string data type. Each characters of string can be represented by *byte* type.
+	```Verilog
+    string str = "Hello World";
+    ```
+- SystemVerilog string data type have some built-in function.
+
+	|Function|Description|
+	|:-:|:-:|
+	|**len()**|Returns number of characters in string|
+    |**putc(int n,byte c)**|Replace n<sub>th</sub> character in string to *c*|
+    |**getc(int n)**|Returns n<sub>th</sub> character in string|
+    |**toupper()**|Convert characters in string to upper case|
+    |**tolower()**|Convert characters in string to lower case|
+    |**atoi()**|ASCII to integer|
+    |**atohex()**|ASCII to hexadecimal number|
+    |**atobin()**|ASCII to binary number|
+
+#### User-defined data type
+- Keyword **typedef** can make user-defined datatype same as in C/C++. 
+	```Verilog
+    typedef logic [63:0] Packet;
+    ```
+
+#### Structure
 ## Class
 ## Interface
 - Interface is bundle of ports. The interface encapsulates port connectivity and functionality. To provide direction information of port can be done by keyword **modport**.  
