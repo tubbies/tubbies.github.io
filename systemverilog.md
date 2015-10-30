@@ -11,8 +11,8 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 |**byte**|8-bit signed integer, 2-state data type|
 |**longint**|64-bit signed integer, 2-state data type|
 
-- - 2-state data type : each bit can have 0 or 1.
-- - 4-state data type : each bit can have 0,1,x and z. 
+    - 2-state data type : each bit can have 0 or 1.
+    - 4-state data type : each bit can have 0,1,x and z. 
 
 #### Real data type
 |Data type|Description|
@@ -24,7 +24,7 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 - Represent storage for pointers that passed using DPI.
 
 #### String data type
-- Dynamic length string data type. Each characters of string can be represented by *byte* type.
+- Dynamic length string data type. Each characters of string can be represented by *byte* type. 
 	```Verilog
     string str = "Hello World";
     ```
