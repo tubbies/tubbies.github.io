@@ -5,73 +5,61 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 ### Structure
 ## Class
 ## Interface
-- Interface is bundle of ports. The interface encapsulates port connectivity and functionality. To provide direction information of port can be done by keyword **modport**.
-
-- ```Verilog
-interface interface_name;
-// interface items ...
-endinterface
-```
+- Interface is bundle of ports. The interface encapsulates port connectivity and functionality. To provide direction information of port can be done by keyword **modport**.  
+	```Verilog
+	interface interface_name;
+	// interface items ...
+	endinterface
+	```
 
 - In interface, it can have input and output, function and task and also can have parameter.
 
 
 - For example, APB interface can be defined as follows:
-
-
-
-- ```Verilog 
-inteface apb3_bus #(AW=16, DW=32);
-wire psel; 
-wire penable;
-wire pready;
-wire pwrite;
-wire [AW-1:0] paddr;
-wire [DW-1:0] pwdata;
-wire [DW-1:0] prdata;
-endinterface
-```
+	```Verilog
+	inteface apb3_bus #(AW=16, DW=32);
+	wire psel; 
+	wire penable;
+	wire pready;
+	wire pwrite;
+	wire [AW-1:0] paddr;
+	wire [DW-1:0] pwdata;
+	wire [DW-1:0] prdata;
+	endinterface
+	```
 
 - Keyword **modport** specify direction within the interface. For example
-
-
-
-- ```Verilog 
-inteface apb3_bus #(AW=16, DW=32);
-wire psel; 
-wire penable;
-wire pready;
-wire pwrite;
-wire [AW-1:0] paddr;
-wire [DW-1:0] pwdata;
-wire [DW-1:0] prdata;
-modport master (input psel, input penable, input pwrite, input [AW-1:0] paddr, input [DW-1:0] pwdata, output pready, output [DW-1:0] prdata);
-modport slave (output psel, output penable, output pwrite, output [AW-1:0] paddr, output [DW-1:0] pwdata, input pready, input [DW-1:0] prdata);
-endinterface
-```
+	```Verilog
+	inteface apb3_bus #(AW=16, DW=32);
+	wire psel; 
+	wire penable;
+	wire pready;
+	wire pwrite;
+	wire [AW-1:0] paddr;
+	wire [DW-1:0] pwdata;
+	wire [DW-1:0] prdata;
+	modport master (input psel, input penable, input pwrite, input [AW-1:0] paddr, input [DW-1:0] pwdata, output pready, output [DW-1:0] prdata);
+	modport slave (output psel, output penable, output pwrite, output [AW-1:0] paddr, output [DW-1:0] pwdata, input pready, 	input [DW-1:0] prdata);
+	endinterface
+	```
 
 
 ## Package
 
-- Another way of mechanism to share data types, functions, tasks, properties between different modules.
-
-
-	
-- ```Verilog
-package package_name;
-// data declaration
-// function or task declaration
-endpackage
-```
+- Another way of mechanism to share data types, functions, tasks, properties between different modules.	
+	```Verilog
+	package package_name;
+	// data declaration
+	// function or task declaration
+	endpackage
+	```
 
 
 - Package need to be imported within modules to use. package import can be done by keyword import. Both explicit import and wildcard import can be done.
-
-
-- ```Verilog
-import PackageA::*;
-import PackageB::foo;
-```
+	```Verilog
+	import PackageA::*;
+	import PackageB::foo;
+    ```
 
 
 ## DPI
