@@ -64,7 +64,7 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 
 - For example, APB interface can be defined as follows:
 	```Verilog
-	inteface apb3_bus #(AW=16, DW=32);
+	inteface apb3_bus #(AW=16, DW=32) (input clk);
 	wire psel; 
 	wire penable;
 	wire pready;
@@ -77,7 +77,7 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 
 - Keyword **modport** specify direction within the interface. For example
 	```Verilog
-	inteface apb3_bus #(AW=16, DW=32);
+	inteface apb3_bus #(AW=16, DW=32) (input clk);
 	wire psel; 
 	wire penable;
 	wire pready;
