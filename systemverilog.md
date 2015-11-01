@@ -46,10 +46,24 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 - Keyword **typedef** can make user-defined datatype same as in C/C++.
 
     ```Verilog
-    typedef logic [63:0] Packet;
+    typedef logic [7:0] vec8_t;
+    ```
+
+#### Enumeration
+- Enumerated data type can be defined using **enum** keyword. Defining new data type using **typedef** can be possible.
+
+	```Verilog
+    typedef bit [1:0] { ST_IDL = 2'b00, ST_RUN = 2'b01 ST_END = 2'b11 } State;
     ```
 
 #### Structure
+- Structure is collection of data types to store more than one data types.
+	````Verilog
+	struct { logic [7:0] a; logic[31:0] b; };
+	typedef struct { logic [15:0] addr; logic [31:0] data; } Packet_t;
+	```
+
+
 ## Class
 ## Interface
 - Interface is bundle of ports. The interface encapsulates port connectivity and functionality. To provide direction information of port can be done by keyword **modport**.  
