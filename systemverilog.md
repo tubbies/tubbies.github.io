@@ -58,6 +58,7 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 
 #### Structure
 - Structure is collection of data types to store more than one data types.
+	
 	```Verilog
 	struct { logic [7:0] a; logic[31:0] b; };
 	typedef struct { logic [15:0] addr; logic [31:0] data; } Packet_t;
