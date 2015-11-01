@@ -62,10 +62,34 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 	```Verilog
 	struct { logic [7:0] a; logic[31:0] b; };
 	typedef struct { logic [15:0] addr; logic [31:0] data; } Packet_t;
+	// keyword typedef can be used to redefine structure as a user-defined data types
 	```
 
-
 ## Class
+
+- Class is type of user-defined data type that have member variables(class properties) and its own function or tasks.
+- keyword **class** and **endclass** is used to define class and keyword **new** is used to create object of classs
+
+	```Verilog
+	class Packet_t;
+	// class properties
+	logic [7:0] addr;
+	logic [31:0] data;
+	function new() // constructor
+	    addr = 8'b0;
+	    data = 32'b0;
+	endfunction
+	function logic [7:0] get_addr();
+		return addr;
+	endfunction
+	function logic [31:0] get_data();
+		return data;
+	endfunction
+	endclass
+	
+	Packet_t p = new ; // object creation using new keyword
+	```
+
 ## Interface
 - Interface is bundle of ports. The interface encapsulates port connectivity and functionality. To provide direction information of port can be done by keyword **modport**.  
 	```Verilog
