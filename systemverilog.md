@@ -64,11 +64,30 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 	typedef struct { logic [15:0] addr; logic [31:0] data; } Packet_t;
 	// keyword typedef can be used to redefine structure as a user-defined data types
 	```
+## Randomization
+- SystemVerilog built-in randomization function that supports conditional constraint randomization
+- Returns 1 if randomization is succeeded, or returns 0.
+- Can give clauses using constraint block *with { }*
+- Can give range and distribution coefficient using **inside** and **dist** keyword.
+    
+    ```Verilog
+    int rvalue[2];
+    logic [3:0] state;
+    logic [7:0] data ;
+    int noerr_flag;
+    noerr_flag = randomize(rvalue[0]); // returns signed 32-bit integer
+    noerr_flag = randomize(rvalue[1]) with { rvalue[1] > 0; rvalue[1] < 256; };
+    // equally distributed random value between (0, 256)
+    noerr_flag = randomize(state) with { state inside { [2'b00:2'b01], [2'b11] };}; 
+    // set range with keyword inside - state is ranged from 2'b00 ~ 2'b01 or 2'b11
+    noerr_flag = randomize(data) with { data dist { [8'd000 : 8'b063] := 3, [8'd064 : 8'd255] := 1 }; };
+    // gives weight of randomization 0~63 : 3/4 and 64~255 : 1/4
+    ```
 
 ## Class
 
 - Class is type of user-defined data type that have member variables(class properties) and its own function or tasks.
-- keyword **class** and **endclass** is used to define class and keyword **new** is used to create object of classs
+- keyword **class** and **endclass** is used to define class and keyword **new** is used to create object(instance of classs) of classs
 
 	```Verilog
 	class Packet_t;
@@ -206,8 +225,6 @@ Using System-Verilog DPI functions and tasks in both different languages (betwee
 
 
 ## SVA(System Verilog Assertion)
-
-## Randomization
 
 ## Coverage
 
