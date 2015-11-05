@@ -106,8 +106,22 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 	endfunction
 	endclass
 	
-	Packet_t p = new ; // object creation using new keyword
+	Packet_t p = new; // object creation using new keyword
 	```
+	
+#### Class constructor
+- When object is created, it automatically calls new function and it usually initialize class properties.
+
+#### This pointer
+- keyword **this** denotes its own class. It used to unambiguously refer to class property.
+
+#### Inheritance
+
+#### Encaptulation
+
+#### Polymorphism 
+
+#### Virtual Classes
 
 ## Interface
 - Interface is bundle of ports. The interface encapsulates port connectivity and functionality. To provide direction information of port can be done by keyword **modport**.  
