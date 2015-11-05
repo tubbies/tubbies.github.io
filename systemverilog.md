@@ -116,8 +116,34 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 - keyword **this** denotes its own class. It used to unambiguously refer to class property.
 
 #### Inheritance
+- Keyword **extends** can extends its class to subclasses
+
+    ```Verilog
+    class Packet_p; // super class
+        int data0;
+        function print_st();
+            $display("Data0 : %d\n",data0);
+        endfunction
+    endclass
+    
+    class Packet_c extends Packet_p; // sub class
+        int data1;
+        function print_st();
+            $display("Data0 : %d\n",data0);
+            $display("Data1 : %d\n",data1);
+        endfunction
+    endclass
+    ```
 
 #### Encaptulation
+- By default, class member variables are visible outside of class. (public)
+- To hide member variables, it need to be declared with keyword **local**.
+    
+    ```Verilog
+    class Packet;
+        local int x;
+    endclass
+    ```
 
 #### Polymorphism 
 
