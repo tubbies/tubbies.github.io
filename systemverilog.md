@@ -115,6 +115,24 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 #### This pointer
 - keyword **this** denotes its own class. It used to unambiguously refer to class property.
 
+#### Parameterized class
+- Paramiterized class can be used in SystemVerilog
+- Types of member variables also can be paramiterized.
+
+    ```Verilog
+    class vector_c #(int size=1);
+        bit [size-1:0] data;
+    endclass
+    
+    vector_c #(10) ubit10; // 10 bit data container
+    
+    class data_c #(type T = int);
+        local T data;
+    endclass
+    
+    data_c (real) myData;
+    ```
+
 #### Inheritance
 - Keyword **extends** can extends its class to subclasses
 
@@ -134,6 +152,7 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
         endfunction
     endclass
     ```
+- Keyword **super** is used to access parent's class member variables or member functions.
 
 #### Encaptulation
 - By default, class member variables are visible outside of class. (public)
