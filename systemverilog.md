@@ -167,7 +167,7 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 
 - Virtual Method : Provides prototypes for the method for its descendant class. Thus, virtual method should be overriden in child class.
 
-- Abstract Class
+- Abstract Class : Set a abstract class by using keyword **pure virtual** to make a prototypes of class. Abstract class cannot be instantiated.
 
     ```Verilog
     class class_p;
@@ -192,7 +192,6 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
     ```
     
 #### Polymorphism 
-
 
 
 ## Interface
