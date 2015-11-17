@@ -163,10 +163,37 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
         local int x;
     endclass
     ```
+#### Virtual Classes
 
+- Virtual Method : Provides prototypes for the method for its descendant class. Thus, virtual method should be overriden in child class.
+
+- Abstract Class
+
+    ```Verilog
+    class class_p;
+        pure virtual function integer my_method(bit [31:0] data); 
+        // no implementation (only prototypes)
+        endfunction
+    endclass
+    
+    class class_c1;
+        virtual function integer my_method(bit [31:0] data);
+            $display("data : %d",data);
+            return 0;
+        endfunction
+    endclass
+    
+    class class_c2;
+        virtual function integer my_method(bit [31:0] data);
+            return data;
+        endfunction
+    endclass
+    
+    ```
+    
 #### Polymorphism 
 
-#### Virtual Classes
+
 
 ## Interface
 - Interface is bundle of ports. The interface encapsulates port connectivity and functionality. To provide direction information of port can be done by keyword **modport**.  
