@@ -233,10 +233,6 @@ IEEE1800-2012 Standard - SystemVerilog that combined HDL(Hardware Description La
 	endinterface
 	```
 	
-## Program
-
-- 
-
 ## Clocking Block
 
 - Gives time-skew description to testbench. (input and output skew) 
@@ -318,6 +314,36 @@ Using System-Verilog DPI functions and tasks in both different languages (betwee
 |string|char* |
 
 ## SVA(System Verilog Assertion)
+
+Assertion is used to validate functionality (property or interface protocol). There are two kinds of assertions - Immediate assertion and Concurrent assertion. 
+
+- Immediate assertion : Called as "simple assertion" and pass / fail of assertion take place immediately. 
+
+	```verilog
+	assert ( A == B) else $faltal("A and B is not same); 
+	// assertion fails when A and B is not same and 
+	```
+	
+- Concurrent assertion : Pass / fail of assertion take place over time. Unlike immediate assertion, evaluation of assertion take place when clock tick. 
+	
+	```verilog
+	assert @(posedge clk) req |-> #1 ack; 
+	// ack is high 1-clk after req is high
+	```
+	
+Behaviour of assertion failure can be specified with clauses **else**. There are 4 types of severity system tasks that can be uses in else clauses. 
+
+	- $fatal   : displays run-time fatal messages and stop the simulation
+	- $error   : displays run-time error messages and stop the simulation
+	- $warning : displays run-time warning messages
+	- $info    : indicates assertion failure
+	
+#### Sequence
+
+
+
+#### Property
+
 
 ## Coverage
 
