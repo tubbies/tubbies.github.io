@@ -3,3 +3,29 @@ https://colorlesscube.com/uvm-guide-for-beginners/
 https://s3.amazonaws.com/cookbook.verification.academy/pdfs/uvm-cookbook-complete-verification-academy.pdf?AWSAccessKeyId=AKIAIEMNC32PGID7APKA&Expires=1447822485&Signature=DgkLiSG2n8824hDfLte4TlaJBfw%3D
 
 http://www.edaplayground.com/
+
+
+
+import uvm_pkg::*;
+
+## Verification Components
+
+#### uvm_sequence_item : Modeling data item
+
+- To define transfer random data with constraints, UVM class library provides **uvm_sequence_item** base class
+- Inherite uvm_sequence_item class to create communication data between two or more components.
+
+    ````Verilog
+    class simple_item extends uvm_sequence_item; // extend from uvm_sequence_item base class
+        rand bit   enable;
+        rand int   data0 ;
+        rand int   data1 ;
+        constraint c_d0 { data0 < 20000; } // gives constraint
+        constraint c_d1 { data1 < 30000; }
+        `uvm_object_util_begin(simple_item)
+            `uvm_field_int(enable, UVM_ALL_ON); // 
+            `uvm_field_int(data0 , UVM_ALL_ON);
+            `uvm_field_int(data1 , UVM_ALL_ON); 
+        `uvm_object_util_end
+    endclass
+    ````
