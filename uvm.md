@@ -10,7 +10,9 @@ import uvm_pkg::*;
 
 ## Verification Components
 
-#### uvm_sequence_item : Modeling data item
+### Modeling data item 
+
+#### uvm_sequence_item 
 
 - To define transfer random data with constraints, UVM class library provides **uvm_sequence_item** base class
 - Inherite uvm_sequence_item class to create communication data between two or more components.
@@ -28,4 +30,28 @@ import uvm_pkg::*;
             `uvm_field_int(data1 , UVM_ALL_ON); 
         `uvm_object_util_end
     endclass
+    ````
+### Transaction Level Component
+
+There are 4 transaction-level components in UMV
+- Sequencer  : Stimulus generator
+- Driver     : Convert transaction from sequencer to signal-level data
+- Monitor    : Recognize signal-level activity and convert to transaction
+- Scoreboard : Analyze transactions (such as coverage etc.)
+
+#### Driver
+
+- Driver convert data transaction from sequencer to DUT.
+- UVM class library provides **uvm_driver** base class
+
+    ````Verilog
+    ````
+
+#### Sequencer
+
+- Sequencer generates stimulus and pass it to driver.
+
+    ````Verilog
+    uvm_sequencer #(simple_item, simple_rsp) sequencer; 
+    // 2nd parameter (request and response) is optional parameter
     ````
