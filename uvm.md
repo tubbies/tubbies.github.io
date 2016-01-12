@@ -45,6 +45,26 @@ There are 4 transaction-level components in UMV
 - UVM class library provides **uvm_driver** base class
 
     ````Verilog
+    class simple_drv extends uvm_driver #(simple_item);
+        simple_item s_item;
+        virtual dut_if vif;
+        
+        function new(string name="simple driver");
+            $super.new(name,parent);
+        endfunction : new // constructor
+        
+        function void build_phase(uvm_phase phase);
+            super.build_phase(phase);
+        endfunction : build_phase
+        
+        task run_phase(uvm_phase phase);
+            forever begin
+                seq_item_port.get_next_item(s_item);
+                // describe driving to vif;
+                seq_item_port.item_done();
+            end
+        endtask : run_phase
+    endclass
     ````
 
 #### Sequencer
