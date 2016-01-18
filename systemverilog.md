@@ -313,6 +313,13 @@ Using System-Verilog DPI functions and tasks in both different languages (betwee
 |chandle|void* |
 |string|char* |
 
+## Functional Coverage (Covergroup)
+
+	```Verilog
+	covergroup cg; /* Insert covergroup content here*/ endgroup
+	cg cg_inst = new; // covergroup instantiation
+	````
+
 ## SVA(System Verilog Assertion)
 
 Assertion is used to validate functionality (property or interface protocol). There are two kinds of assertions - Immediate assertion and Concurrent assertion. 
