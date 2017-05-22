@@ -1,0 +1,15 @@
+graph  {     
+    #node[shape=plaintext,fontname="Norse"];
+    #http://www.graphviz.org/doc/info/attrs.html
+    node[shape=circle,fontname="Norse",style=filled,fillcolor="#FFFFFF"];
+    # Entry
+    beer[label="Beer",fillcolor="#AAAAAA"];
+    # ale[label="Ale",fontname="Norse-Bold"];
+    ale[label="Ale"];
+    lager[label="Lager"];
+    lambic[label="Lambic"];
+    # Connection
+    beer -- ale;
+    beer -- lager;
+    beer -- lambic;
+}
