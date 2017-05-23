@@ -1,15 +1,382 @@
 graph  {     
     #node[shape=plaintext,fontname="Norse"];
     #http://www.graphviz.org/doc/info/attrs.html
-    node[shape=circle,fontname="Norse",style=filled,fillcolor="#FFFFFF"];
+    #node[shape=circle,fontname="Norse",style=filled,fillcolor="#FFFFFF" ];
+        
     # Entry
-    beer[label="Beer",fillcolor="#AAAAAA"];
     # ale[label="Ale",fontname="Norse-Bold"];
-    ale[label="Ale"];
-    lager[label="Lager"];
-    lambic[label="Lambic"];
+    beer                    [label          =   "Beer"
+                            ,fontname       =   "Norse"
+                            ,shape          =   circle
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ,fillcolor      =   "#AAAAAA"
+                            ];
+    ale                     [label          =   "Ale"                         
+                            ,shape          =   circle
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    lager                   [label="Lager"                       
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    lambic                  [label="Lambic"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    pale_ale                [label="Pale Ale"                    
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   8
+                            ];
+    bitter                  [label="English Bitter"              
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   8 
+                            ];
+    ordinary_bitter         [label="Session / Ordinary Bitter"   
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   6
+                            ];
+    special_bitter          [label="Best / Special Bitter"       
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   6
+                            ];
+    extra_special_bitter    [label="Extra Special Bitter"        
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   6
+                            ];
+    IPA                     [label="IPA(India Pale Ale)"         
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   8
+                            ];
+    APA                     [label="APA(America Pale Ale)"       
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    amber_ale               [label="Amber Ale"                   
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    biere_de_garde          [label="Bière de Garde"              
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    blonde                  [label="Blonde"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    schotch_ale             [label="Schotch Ale"                 
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    schotish_wee_heavy      [label="Schotish Wee Heavy"          
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    stout                   [label="Stout / Porter"              
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    dry_stout               [label="(Dry )Stout"                 
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    milk_stout              [label="Sweet / Milk Stout"          
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    oatmeal_stout           [label="Oatmeal Stout"               
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    imperial_stout          [label="Russian Imperial Stout"      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    baltic_porter           [label="Baltic Porter"               
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    wheat_beer              [label="Wheat Beer"                  
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    weizen                  [label="Weizen"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    hefeweizen              [label="Hefeweizen"                  
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    kristallweizen          [label="Kristallweizen"              
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    witbier                 [label="Witbier"                     
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    berliner_weisse         [label="Berliner Weisse"             
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    brown_ale               [label="Brown Ale"                   
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    altbier                 [label="Altbier"                     
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    kolsch                  [label="Kölsch"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    belgian_ale             [label="Belgian Ale"                 
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    dubble                  [label="Dubble"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    tripel                  [label="Tripel"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    quadruple               [label="Quadrupel"                   
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    saison                  [label="Saison"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    barley_wine             [label="Barley Wine"                 
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    old_ale                 [label="Old Ale"                     
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    flanders_red_ale        [label="Flanders Red Ale"            
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    flanders_old_bruin      [label="Flanders Old Bruin"          
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    gose                    [label="Gose"                        
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    roggenbier              [label="Roggenbier(Rye Beer)"        
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    pale_lager              [label="Pale Lager"                  
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    pilsner                 [label="Pilsner"                     
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    export                  [label="Dortmund Export"             
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    helles                  [label="Munich Helles"               
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    radler                  [label="Radler"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    america_lager           [label="America Adjunct Lager"       
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    dry_beer                [label="Dry Lager Beer"              
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    dark_lager              [label="Dark Lager"                  
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    schwarzbier             [label="Schwarzbier"                 
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    dunkel                  [label="Dunkel"                      
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    rauchbier               [label="Rauchbier"                   
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    oktoberfestbier         [label="Oktoberfestbier / Märzen"    
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    bock                    [label="Bock"                        
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    kellerbier              [label="Kellerbier"                  
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    unblended_lambic        [label="Unblended Lambic"            
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    gueze                   [label="Gueze"                       
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    kriek                   [label="Kriek"                       
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    faro                    [label="Faro"                        
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+    fruit_lambic            [label="Fruit Lambic"                
+                            ,fixedsize      =   true
+                            ,width          =   1.2
+                            ,fontsize       =   12
+                            ];
+
     # Connection
-    beer -- ale;
-    beer -- lager;
-    beer -- lambic;
+    beer                    -- ale                              ;
+    beer                    -- lager                            ;
+    beer                    -- lambic                           ;
+    ale                     -- pale_ale                         ;
+    pale_ale                -- bitter                           ;
+    bitter                  -- ordinary_bitter                  ;
+    bitter                  -- special_bitter                   ;
+    bitter                  -- extra_special_bitter             ;
+    pale_ale                -- IPA                              ;
+    pale_ale                -- APA                              ;
+    pale_ale                -- amber_ale                        ;
+    pale_ale                -- biere_de_garde                   ;
+    pale_ale                -- blonde                           ;
+    pale_ale                -- schotch_ale                      ;
+    schotch_ale             -- schotish_wee_heavy               ;
+    ale                     -- stout                            ;
+    stout                   -- dry_stout                        ;
+    stout                   -- milk_stout                       ;
+    stout                   -- oatmeal_stout                    ;
+    stout                   -- imperial_stout                   ;
+    stout                   -- baltic_porter                    ;
+    ale                     -- wheat_beer                       ;
+    wheat_beer              -- weizen                           ;
+    weizen                  -- hefeweizen                       ;
+    weizen                  -- kristallweizen                   ;
+    wheat_beer              -- witbier                          ;
+    wheat_beer              -- berliner_weisse                  ;
+    ale                     -- brown_ale                        ;
+    ale                     -- altbier                          ;
+    ale                     -- kolsch                           ;
+    ale                     -- belgian_ale                      ;
+    belgian_ale             -- dubble                           ;
+    belgian_ale             -- tripel                           ;
+    belgian_ale             -- quadruple                        ;
+    belgian_ale             -- saison                           ;
+    ale                     -- barley_wine                      ;
+    ale                     -- old_ale                          ;
+    ale                     -- flanders_red_ale                 ;
+    ale                     -- flanders_old_bruin               ;
+    ale                     -- gose                             ;
+    ale                     -- roggenbier                       ;
+
+    lager                   -- pale_lager                       ;
+    pale_lager              -- pilsner                          ;
+    pale_lager              -- export                           ;
+    pale_lager              -- helles                           ;
+    pale_lager              -- radler                           ;
+    pale_lager              -- america_lager                    ;
+    pale_lager              -- dry_beer                         ;
+    lager                   -- dark_lager                       ;
+    dark_lager              -- schwarzbier                      ;
+    dark_lager              -- dunkel                           ;
+    dark_lager              -- rauchbier                        ;
+    lager                   -- oktoberfestbier                  ;
+    lager                   -- bock                             ;
+    lager                   -- kellerbier                       ;
+    lambic                  -- unblended_lambic                 ;
+    lambic                  -- gueze                            ;
+    lambic                  -- faro                             ;
+    lambic                  -- kriek                            ;
+    lambic                  -- fruit_lambic                     ;
+
+	
 }

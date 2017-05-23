@@ -44,7 +44,7 @@ Pale Ale 계열 중에 가장 유명한 맥주입니다.
 
 ![Sierra Nevana Pale Ale](beer_images/sierra_nevada.png)
 
-- 이 APA에서 IPA처럼 홉의 사용을 늘리면 American Indian Pale Ale 이라는 맥주가 탄생하기도 합니다.
+- 이 APA에서 IPA처럼 홉의 사용을 늘리면 American India Pale Ale 이라는 맥주가 탄생하기도 합니다.
 - 크래프트 양조장의 태동과 함께 한 맥주로 우리나라에 있는 대부분의 크래프트 맥주라고 하면 대표 맥주를 이쪽 Pale Ale 혹은 American IPA 등을 기반에 두고 있습니다.
 
 ![대동강 페일에일](beer_images/daedonggang.jpg)
@@ -127,7 +127,7 @@ Pale Ale 계열 중에 가장 유명한 맥주입니다.
 - 크게 독일 방식인 Weissbier(Weizen) 와 벨기에 (혹은 네덜란드) 방식인 Witbier 방식이 유명합니다. 둘 다 어원은 영어로 White + Beer 입니다.
 - 에일 맥주 중에서 가장 널리 알려지고 판매되는 편이며 쓴 맛이 적고 거부감이 적은 편이라 맥주 입문자에게 추천 되는 맥주입니다.
 
-	#### Weizen
+  #### Weizen
 
 - 독일식 밀맥주의 경우에 맥주 순수령의 진원지인 바이에른 지방의 맥주여서 맥주 순수령에 의하면 맥주로 인정 받을 수 없어서 전해질 수 없는 맥주이나 바이에른 지방의 지배자의 마음에 들었다는 이유만으로 살아남았습니다. 다른 고대의 맥주와 다르게 상당히 밝은 색으로 가지는 특징이 있습니다.
 - 일반적으로 Weizen의 경우 길쭉하고 입구가 넓은 형태의 잔에 마시게 됩니다.
