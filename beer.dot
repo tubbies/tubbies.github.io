@@ -169,7 +169,7 @@ graph  {
                             ,width          =   1.2
                             ,fontsize       =   12
                             ];
-    dubble                  [label="Dubble"                      
+    dubbel                  [label="Dubbel"                      
                             ,fixedsize      =   true
                             ,width          =   1.2
                             ,fontsize       =   12
@@ -179,7 +179,7 @@ graph  {
                             ,width          =   1.2
                             ,fontsize       =   12
                             ];
-    quadruple               [label="Quadrupel"                   
+    quadrupel               [label="Quadrupel"                   
                             ,fixedsize      =   true
                             ,width          =   1.2
                             ,fontsize       =   12
